@@ -3,7 +3,7 @@
 
 **Author:** Kevin Li
 
-## Project Overview
+## Problem and Project Overview
 The objective of this project is to predict the next movie a person will watch, given their chronologically ordered viewing history. This creates a multi-class classification problem over the possible movie classes, where the goal is to identify the correct next movie among all candidates. The model treats next-movie prediction as a sequential modeling task, leveraging an LSTM to capture temporal patterns in user behavior. This project was motivated by the fact that recommendation algorithms power many of today’s most widely used digital platforms, such as Netflix, YouTube, and Spotify.
 
 ## Dataset
@@ -52,15 +52,37 @@ This repo includes two types of notebooks:
 **Note:** These instructions assume you are in the root directory of the repo and have downloaded the data from MovieLens.
 
 **Note:** It is recommended to run these notebooks in Google Colab in order to use their free NVIDIA Tesla T4 GPU.
-1. Install dependencies
+1. **Pre-requisite: create a virtual environment**
+   ```
+   python3 -m venv .venv
+   ```
+2. **Activate the virtual environment**
+   ```
+   source .venv/bin/activate
+   ```
+4. **Install dependencies**
    ```
    pip install -r requirements.txt
    ```
-2. Run the baseline model
-
+   If you plan to run the notebooks using Jupyter, install it as well:
+   ```
+   pip install jupyter
+   ```
+6. **Run the notebooks**
+   - Option A: Run the notebooks in VS Code
+        - Open any `.ipynb` file (e.g. `project_demo.ipynb`)
+        - When VS Code prompts you to select a kernel, choose the `.venv` environment
+        - Click "Run All" to execute the notebook
+   - Option B: Run the notebooks in Jupyter Notebook
+        - Launch Jupyter Notebook
+          ```
+          jupyter notebook
+          ```
+        - In the browser window, open `project_demo.ipynb` to run the demo or open `notebooks/baseline_model.ipynb` / `notebooks/final_model.ipynb` for full project notebooks
+        - Click "Run" --> "Run All Cells"
 
 ## References
-- MovieLens Dataset
+- [MovieLens Dataset](https://files.grouplens.org/datasets/movielens/ml-latest-small-README.html)
     - Harper, F. Maxwell, and Joseph A. Konstan. “The MovieLens Datasets.” ACM Transactions on Interactive Intelligent Systems, vol. 5, no. 4, 22 Dec. 2015, pp. 1–19, https://doi.org/10.1145/2827872.
-- Neural Collaborative Filtering
+- [Neural Collaborative Filtering](https://arxiv.org/abs/1708.05031)
     - He, Xiangnan, et al. “Neural Collaborative Filtering.” ArXiv:1708.05031 [Cs], 16 Aug. 2017, arxiv.org/abs/1708.05031.
