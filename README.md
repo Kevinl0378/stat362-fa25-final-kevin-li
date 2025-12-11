@@ -45,6 +45,13 @@ This project uses the [MovieLens (latest-small)](https://files.grouplens.org/dat
 <img src="figures/Final%20Model%20-%20Training%20and%20Validation%20Curves.png" width=45%>
 
 ## How to Run the Code
+This repo includes two types of notebooks:
+1. `project_demo.ipynb`: a demo that trains the final LSTM architecture and plots HR@K (K = 1–10).
+2. `notebooks/`: full project notebooks (`baseline_model.ipynb` and `final_model.ipynb`) that reproduce the full experiments and visualizations from this repo.
+
+**Note:** These instructions assume you are in the root directory of the repo and have downloaded the data from MovieLens.
+
+**Note:** It is recommended to run these notebooks in Google Colab in order to use their free NVIDIA Tesla T4 GPU.
 1. Install dependencies
    ```
    pip install -r requirements.txt
